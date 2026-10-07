@@ -1,0 +1,49 @@
+title: "[Known issue] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Maintainers only. Keep this post updated until the issue is resolved.
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Investigating
+        - Identified
+        - Monitoring
+        - Resolved
+    validations:
+      required: true
+  - type: dropdown
+    id: api-area
+    attributes:
+      label: Affected API
+      multiple: true
+      options:
+        - Auth API
+        - Product API
+        - Store API
+        - Order API
+        - Category API
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What is affected, since when and for whom?
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround
+      description: Leave empty if there is none.
+  - type: textarea
+    id: updates
+    attributes:
+      label: Updates
+      description: Add dated updates here (UTC).
