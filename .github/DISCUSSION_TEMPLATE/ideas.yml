@@ -1,0 +1,40 @@
+title: "[Idea] "
+labels: ["type:feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share your idea for improving the Elonky Integration APIs. Upvote ideas you would also use, it helps us prioritize.
+
+        Please do not include credentials, tokens or customer personal data.
+  - type: dropdown
+    id: api-area
+    attributes:
+      label: API area
+      options:
+        - Auth API
+        - Product API
+        - Store API
+        - Order API
+        - Category API
+        - New API / other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe your integration scenario.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to see?
+      description: A new endpoint, field or behavior. Example requests and responses help.
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: How do you handle this today?
