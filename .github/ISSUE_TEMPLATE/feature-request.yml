@@ -1,0 +1,50 @@
+name: Feature request
+description: Suggest a new endpoint, field or improvement for the Elonky Integration APIs
+title: "[Feature] "
+labels: ["type:feature", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an early idea or want community feedback first? Start a conversation in [Ideas](https://github.com/Elonky/developers/discussions/categories/ideas).
+
+        Use this form for a clear, specific request. Please do not include credentials, tokens or customer personal data.
+  - type: dropdown
+    id: api-area
+    attributes:
+      label: API area
+      options:
+        - Auth API
+        - Product API
+        - Store API
+        - Order API
+        - Category API
+        - New API / other
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: What are you trying to achieve?
+      description: Describe your integration scenario and the problem you are facing today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the endpoint, field or behavior you would like. Example requests and responses are welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and current workaround
+      description: How do you handle this today?
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and discussions for similar requests.
+          required: true
