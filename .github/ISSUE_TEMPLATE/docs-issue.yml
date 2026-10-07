@@ -1,0 +1,50 @@
+name: Documentation issue
+description: Report a mistake, gap or unclear section in the Elonky developer documentation
+title: "[Docs] "
+labels: ["type:docs", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve the documentation at [developer.elonky.com](https://developer.elonky.com).
+  - type: input
+    id: page-url
+    attributes:
+      label: Page URL
+      placeholder: "https://developer.elonky.com/en/documentation/"
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Documentation language
+      options:
+        - English
+        - Türkçe
+        - 日本語
+    validations:
+      required: true
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: What kind of problem is it?
+      options:
+        - Incorrect information
+        - Missing information
+        - Unclear or confusing
+        - Broken link or image
+        - Translation problem
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What is wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested fix
+      description: Optional. Tell us what the page should say.
