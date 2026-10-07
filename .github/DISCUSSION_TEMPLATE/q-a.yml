@@ -1,0 +1,53 @@
+title: "[Q&A] "
+labels: ["type:question", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check the [documentation](https://developer.elonky.com/en/documentation/) first.
+
+        For credentials and tokens, use **Authentication & Credentials**. For products, use **Products & Catalog**. For orders, use **Orders & Fulfillment**. Use this category for the Store API and everything else.
+
+        **Never post client IDs, client secrets, access tokens or customer personal data.**
+  - type: dropdown
+    id: api-area
+    attributes:
+      label: API area
+      options:
+        - Store API
+        - Category API
+        - Auth API
+        - Product API
+        - Order API
+        - General or other
+    validations:
+      required: true
+  - type: input
+    id: endpoint
+    attributes:
+      label: Endpoint
+      placeholder: "e.g. GET /api/store/v1/integration/stores/info"
+  - type: input
+    id: http-status
+    attributes:
+      label: HTTP status code
+      description: Leave empty if you did not get an error.
+  - type: input
+    id: correlation-id
+    attributes:
+      label: Trace or correlation ID
+      description: If one was returned in the response.
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to achieve?
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What did you try and what happened?
+      description: Include a sanitized request and response.
+      render: shell
+    validations:
+      required: true
