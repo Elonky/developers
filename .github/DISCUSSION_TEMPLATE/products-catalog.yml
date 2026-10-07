@@ -1,0 +1,56 @@
+title: "[Products] "
+labels: ["area:product", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check the Product API and Category API pages in the [API Reference](https://developer.elonky.com/en/reference/) first, especially the validation rules.
+
+        **Never post credentials, tokens or customer personal data.**
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Creating a product
+        - Listing and filtering products
+        - Updating product details or status
+        - Stock and inventory
+        - Features and variants
+        - Gallery images and video
+        - Shipping profiles
+        - Return policies
+        - Store sections
+        - Category mapping
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: endpoint
+    attributes:
+      label: Endpoint
+      placeholder: "e.g. POST /api/product/v1/integration/products"
+  - type: input
+    id: http-status
+    attributes:
+      label: HTTP status code
+      description: Leave empty if you did not get an error.
+  - type: input
+    id: correlation-id
+    attributes:
+      label: Trace or correlation ID
+      description: If one was returned in the response.
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to achieve?
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What did you try and what happened?
+      description: Include a sanitized request body and response.
+      render: shell
+    validations:
+      required: true
