@@ -1,0 +1,52 @@
+title: "[Orders] "
+labels: ["area:order", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check the Order API page in the [API Reference](https://developer.elonky.com/en/reference/) first, including the list of order statuses.
+
+        **Never post credentials, tokens or customer personal data** such as names, addresses or emails.
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Listing orders and filters
+        - Order statuses
+        - Marking an order as Processed
+        - Marking an order as InTransit
+        - Shipping carriers
+        - Pagination
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: endpoint
+    attributes:
+      label: Endpoint
+      placeholder: "e.g. GET /api/order/v1/integration/orders"
+  - type: input
+    id: http-status
+    attributes:
+      label: HTTP status code
+      description: Leave empty if you did not get an error.
+  - type: input
+    id: correlation-id
+    attributes:
+      label: Trace or correlation ID
+      description: If one was returned in the response.
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to achieve?
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What did you try and what happened?
+      description: Include a sanitized request and response. Remove customer data first.
+      render: shell
+    validations:
+      required: true
