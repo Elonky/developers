@@ -1,0 +1,95 @@
+name: Bug report
+description: Report a reproducible problem with an Elonky Integration API
+title: "[Bug] "
+labels: ["type:bug", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a problem.
+
+        Please search existing issues first. If you are not sure whether this is a bug, ask in [Discussions](https://github.com/Elonky/developers/discussions) instead.
+
+        **Never post client IDs, client secrets, access tokens or customer personal data.** Replace sensitive values with `<redacted>`.
+  - type: dropdown
+    id: api-area
+    attributes:
+      label: API area
+      options:
+        - Auth API
+        - Product API
+        - Store API
+        - Order API
+        - Category API
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: endpoint
+    attributes:
+      label: Endpoint
+      description: HTTP method and path.
+      placeholder: "e.g. POST /api/product/v1/integration/products"
+    validations:
+      required: true
+  - type: input
+    id: timestamp
+    attributes:
+      label: Timestamp of the failing request
+      description: Include the time zone, preferably UTC.
+      placeholder: "e.g. 2026-10-07 14:32 UTC"
+    validations:
+      required: true
+  - type: input
+    id: http-status
+    attributes:
+      label: HTTP status code
+      placeholder: "e.g. 400"
+    validations:
+      required: true
+  - type: input
+    id: correlation-id
+    attributes:
+      label: Trace or correlation ID
+      description: If one was returned in the response. It helps us find the request in our logs.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Request an access token
+        2. Call ...
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: request-response
+    attributes:
+      label: Sanitized request and response
+      description: Remove credentials, tokens and personal data first.
+      render: shell
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Before submitting
+      options:
+        - label: I removed all credentials, tokens and personal data from this report.
+          required: true
+        - label: I checked the documentation and searched existing issues and discussions.
+          required: true
