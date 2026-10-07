@@ -1,0 +1,39 @@
+title: "[Show] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Show the community what you built with the Elonky APIs.
+
+        Please do not include credentials, tokens or customer personal data in screenshots, logs or code.
+  - type: dropdown
+    id: type
+    attributes:
+      label: What are you sharing?
+      options:
+        - Integration
+        - SDK or client library
+        - Tool or script
+        - Tutorial or article
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Repository, website or article, if public.
+  - type: textarea
+    id: description
+    attributes:
+      label: Tell us about it
+      description: Which APIs does it use and what does it do?
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Before posting
+      options:
+        - label: This post contains no credentials, tokens or customer personal data.
+          required: true
