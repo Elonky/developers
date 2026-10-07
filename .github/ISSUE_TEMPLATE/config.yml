@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question or get integration help
+    url: https://github.com/Elonky/developers/discussions/new/choose
+    about: For "how do I...?" questions and integration help, please use Discussions instead of Issues.
+  - name: Read the documentation
+    url: https://developer.elonky.com/en/documentation/
+    about: Integration Guide and API Reference for the Elonky Integration APIs.
+  - name: Account-specific or private issue
+    url: mailto:support@elonky.com
+    about: Credentials, account or order-specific problems. Never post client secrets or tokens publicly.
+  - name: Report a security vulnerability
+    url: https://github.com/Elonky/developers/security/advisories/new
+    about: Please report vulnerabilities privately. Do not open a public issue.
